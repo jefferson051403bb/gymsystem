@@ -1,9 +1,10 @@
 <?php
 
-    $hname = 'localhost';
-    $uname = 'root';
-    $pass = '';
-    $db = 'gymko';
+  $host = getenv('DB_HOST');
+    $username = getenv('DB_USERNAME');
+    $password = getenv('DB_PASSWORD');
+    $dbname = getenv('DB_DATABASE');
+    $port = getenv('DB_PORT') ?: '3306'; // Default to 3306 if not set
 
     $con = mysqli_connect($hname, $uname, $pass, $db);
 
